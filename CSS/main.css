@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap");
+html,
+body {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat";
+}
+
+.header {
+  position: absolute;
+  background: white;
+  padding: 1.2em;
+  width: calc(100% - 1.2em * 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header .logo {
+  color: #191919;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.header ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.header ul li a {
+  color: #191919;
+  text-decoration: none;
+  padding: 1em;
+}
+
+.wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+.hero {
+  background: url("../Images/Photos/action-asphalt-balancing-340991.jpg");
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - 5em * 2);
+  padding: 5em;
+  display: block;
+}
+
+.social {
+  background: white;
+  padding: 4em;
+  width: calc(100% - 4em * 2);
+}
+
+.social .socialnav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0.5em;
+}
+
+.social h2 {
+  padding: 0.5em;
+  margin: 0;
+  text-align: center;
+}
+
+.social ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.social img {
+  height: 3em;
+  padding: 0.25em;
+}
+
+.footer {
+  background: #191919;
+  padding: 2em;
+  width: calc(100% - 2em * 2);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.footer ul {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: 0;
+  padding: 0;
+}
+
+.footer ul li {
+  color: white;
+}
+
+.footer ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 1em;
+}
+/*# sourceMappingURL=main.css.map */

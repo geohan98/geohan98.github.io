@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap");
+//Variables
+$HeaderPadding: 1.2em;
+$HeroPadding: 5em;
+$SocialPadding: 4em;
+$FooterPadding: 2em;
+$Dark1: #191919;
+$Dark2: #282828;
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  height: 100%;
+  font-family: "Montserrat";
+}
+
+.header {
+  position: absolute;
+  background: white;
+  padding: $HeaderPadding;
+  width: calc(100% - #{$HeaderPadding} * 2);
+  display: flex;
+  justify-content: space-between;
+
+  .logo {
+    color: $Dark1;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+    li {
+      a {
+        color: $Dark1;
+        text-decoration: none;
+        padding: 1em;
+      }
+    }
+  }
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+}
+
+.hero {
+  background: url("../Images/Photos/action-asphalt-balancing-340991.jpg");
+  background-position: center;
+  background-size: cover;
+  height: calc(100vh - #{$HeroPadding} * 2);
+  padding: $HeroPadding;
+  display: block;
+}
+
+.social {
+  background: white;
+  padding: $SocialPadding;
+  width: calc(100% - #{$SocialPadding} * 2);
+
+  .socialnav {
+    display: flex;
+    justify-content: space-around;
+    padding: 0.5em;
+  }
+
+  h2 {
+    padding: 0.5em;
+    margin: 0;
+    text-align: center;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+  }
+
+  img {
+    height: 3em;
+    padding: 0.25em;
+  }
+}
+
+.footer {
+  background: $Dark1;
+  padding: $FooterPadding;
+  width: calc(100% - #{$FooterPadding} * 2);
+  display: flex;
+  justify-content: space-around;
+
+  ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+
+    li {
+      color: white;
+    }
+
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+        padding: 1em;
+      }
+    }
+  }
+}

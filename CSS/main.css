@@ -1,35 +1,41 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap");
-html,
 body {
   margin: 0;
-}
-
-body {
-  height: 100%;
   font-family: "Montserrat";
 }
 
-.header {
+.barWrapper {
   position: absolute;
-  background: white;
-  padding: 1.2em;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 2fr 1fr;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas: "title . nav";
   width: calc(100% - 1.2em * 2);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  padding: 1.2em;
+  background-color: white;
 }
 
-.header .logo {
+.barWrapper .title {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: title;
+}
+
+.barWrapper .title .logo {
   color: #191919;
   text-transform: uppercase;
   font-weight: bold;
   text-decoration: none;
 }
 
-.header ul {
+.barWrapper .nav {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  grid-area: nav;
+}
+
+.barWrapper .nav ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -40,7 +46,7 @@ body {
   padding: 0;
 }
 
-.header ul li a {
+.barWrapper .nav ul li a {
   color: #191919;
   text-decoration: none;
   padding: 1em;
@@ -51,9 +57,15 @@ body {
   display: grid;
   -ms-grid-columns: auto;
       grid-template-columns: auto;
+  -ms-grid-rows: auto auto auto;
+      grid-template-rows: auto auto auto;
+      grid-template-areas: "hero" "social" "footer";
 }
 
-.hero {
+.wrapper .hero {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: hero;
   background: url("../Images/Photos/action-asphalt-balancing-340991.jpg");
   background-position: center;
   background-size: cover;
@@ -62,13 +74,15 @@ body {
   display: block;
 }
 
-.social {
+.wrapper .social {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: social;
   background: white;
-  padding: 4em;
-  width: calc(100% - 4em * 2);
+  padding: 3em;
 }
 
-.social .socialnav {
+.wrapper .social .socialwrap {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -77,13 +91,13 @@ body {
   padding: 0.5em;
 }
 
-.social h2 {
+.wrapper .social h2 {
   padding: 0.5em;
   margin: 0;
   text-align: center;
 }
 
-.social ul {
+.wrapper .social ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,23 +108,28 @@ body {
   padding: 0;
 }
 
-.social img {
+.wrapper .social img {
   height: 3em;
   padding: 0.25em;
 }
 
-.footer {
+.wrapper .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
   background: #191919;
-  padding: 2em;
-  width: calc(100% - 2em * 2);
+}
+
+.wrapper .footer .footerwrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  padding: 1.2em;
 }
 
-.footer ul {
+.wrapper .footer ul {
   list-style: none;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -121,13 +140,29 @@ body {
   padding: 0;
 }
 
-.footer ul li {
+.wrapper .footer ul li {
   color: white;
 }
 
-.footer ul li a {
+.wrapper .footer ul li a {
   color: white;
   text-decoration: none;
-  padding: 1em;
+  padding-right: 4em;
+  padding-left: 4em;
+}
+
+@media only screen and (max-width: 768px) {
+  .barWrapper {
+    display: none;
+    -ms-grid-columns: auto;
+        grid-template-columns: auto;
+        grid-template-areas: "title";
+  }
+  .barWrapper .title {
+    text-align: center;
+  }
+  .barWrapper .nav {
+    display: none;
+  }
 }
 /*# sourceMappingURL=main.css.map */

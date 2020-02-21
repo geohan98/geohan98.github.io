@@ -1,153 +1,174 @@
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap");
-
-$Dark1: #191919;
-$Dark2: #282828;
-
-$HeaderPadding: 1.2em;
-$HeroPadding: 5em;
-$SocialPadding: 3em;
-$FooterPadding: 1.2em;
-$FooterListPadding: 4em;
+/* Core Styles */
 
 body {
     margin: 0;
-    font-family: "Montserrat";
+    font-family: Arial, Helvetica, sans-serif;
+    background: #333;
+    color: #fff;
+    font-size: 1.1em;
+    line-height: 1.5;
+    text-align: center;
 }
 
-.barWrapper {
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3 {
+    margin: 0;
+    padding: 1em 0;
+}
+
+p {
+    margin: 0;
+    padding: 1em 0p;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    margin: .5em 0;
+}
+
+.btn:hover {
+    background: #eaeaea;
+    color: #333;
+}
+
+/* Header Showcase */
+
+#showcase {
+    min-height: 450px;
+    color: #fff;
+    text-align: center;
+}
+
+#showcase .showcase-image {
     position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-areas: "title . nav";
-    width: calc(100% - #{$HeaderPadding} * 2);
-    padding: $HeaderPadding;
-    background-color: white;
-
-    .title {
-        grid-area: title;
-
-        .logo {
-            color: $Dark1;
-            text-transform: uppercase;
-            font-weight: bold;
-            text-decoration: none;
-
-        }
-    }
-
-    .nav {
-        grid-area: nav;
-
-        ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-
-            li {
-                a {
-                    color: $Dark1;
-                    text-decoration: none;
-                    padding: 1em;
-                }
-            }
-        }
-    }
+    background: #333 url('../Images/accessory-buttons-console-control-275033.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.4;
 }
 
-.wrapper {
-    display: grid;
-    grid-template-columns: auto;
-    grid-template-rows: auto auto auto;
-    grid-template-areas: "hero""social""footer";
-
-    .hero {
-        grid-area: hero;
-        background: url("../Images/Photos/action-asphalt-balancing-340991.jpg");
-        background-position: center;
-        background-size: cover;
-        height: calc(100vh - #{$HeroPadding} * 2);
-        padding: $HeroPadding;
-        display: block;
-    }
-
-    .social {
-        grid-area: social;
-        background: white;
-        padding: $SocialPadding;
-
-        .socialwrap {
-            display: flex;
-            justify-content: space-around;
-            padding: 0.5em;
-        }
-
-        h2 {
-            padding: 0.5em;
-            margin: 0;
-            text-align: center;
-        }
-
-        ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-        }
-
-        img {
-            height: 3em;
-            padding: 0.25em;
-        }
-    }
-
-    .footer {
-        grid-area: footer;
-        background: $Dark1;
-
-        .footerwrapper {
-            display: flex;
-            justify-content: space-around;
-            padding: $FooterPadding;
-        }
-
-        ul {
-            list-style: none;
-            display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
-
-            li {
-                color: white;
-            }
-
-            li {
-                a {
-                    color: white;
-                    text-decoration: none;
-                    padding-right: $FooterListPadding;
-                    padding-left: $FooterListPadding;
-                }
-            }
-        }
-    }
+#showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 0;
 }
 
-@media only screen and (max-width: 768px) {
-    .barWrapper {
-        display: none;
-        grid-template-columns: auto;
-        grid-template-areas: "title";
+#showcase .content-wrap,
+#section-a .content-wrap {
+    padding: 0 1.5em;
+}
 
-        .title {
-            text-align: center;
-        }
+/* Section A */
 
-        .nav {
-            display: none;
-        }
+#section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+}
+
+/* Section B */
+
+#section-b {
+    padding: 2em 1em 1em;
+}
+
+#section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#section-b li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+}
+
+.card-content {
+    padding: 1.5em;
+}
+
+/* Section C */
+
+#section-c {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+}
+
+/* Section D */
+
+#section-d .box {
+    padding: 2em;
+    color: #fff;
+}
+
+#section-d .box:first-child {
+    background: #2690d4;
+}
+
+/* Footer */
+
+#main-footer {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+
+#main-footer a {
+    color: #2690d4;
+    text-decoration: none;
+}
+
+/* Media Query */
+
+@media(min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+
+    #section-a .content-text {
+        columns: 2;
+        column-gap: 2em;
+    }
+
+    #section-a .content-text p {
+        padding-top: 0;
+    }
+
+    .content-wrap,
+    #section-b ul {
+        grid-column: 2/4;
+    }
+
+    .box,
+    #main-footer div {
+        grid-column: span 2;
+    }
+
+    #section-b ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    #section-b li {
+        width: 31%;
     }
 }

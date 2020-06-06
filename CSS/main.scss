@@ -110,6 +110,7 @@ p {
 
 /* Section B */
 
+
 #section-b {
     padding: 2em 1em 1em;
 }
@@ -126,9 +127,34 @@ p {
     color: #333;
 }
 
+.card{
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: "image" "content" "space" "button";
+}
+
+.card-image {
+    grid-area: image;
+}
+
 .card-content {
     padding: 1.5em;
+    grid-area: content;
 }
+
+.blankSpace {
+    grid-area: space;
+}
+
+.card-button
+{
+    padding: 1.5em;
+    grid-area: button;
+}
+
+
+
 /* Section C */
 
 #section-c {
@@ -177,7 +203,6 @@ p {
     #showcase {
         min-height: 700px;
     }
-    
 
     #showcase .showcase-image {
         height: 700px;

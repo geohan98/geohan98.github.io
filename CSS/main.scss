@@ -1,5 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap");
-/* Core Styles */
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     margin: 0;
@@ -19,17 +22,14 @@ img {
 
 h1,
 h2,
-h3 {
-    margin: 0;
-    padding: 1em 0;
-}
-
+h3,
 p {
     margin: 0;
     padding: 1em 0;
 }
 
-.btn {
+
+.button {
     display: inline-block;
     background: #333;
     color: #fff;
@@ -39,68 +39,51 @@ p {
     margin: .5em 0;
 }
 
-.btn:hover {
+.button:hover {
     background: #eaeaea;
     color: #333;
 }
 
-/* Header Showcase */
+.content-wrap {
+    padding: 0 1.5em;
+}
+
+//Showcase
 
 #showcase {
-    min-height: 450px;
+    height: 100vh;
     color: #fff;
     text-align: center;
 }
 
-
-
 #showcase .showcase-image {
     position: absolute;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#showcase .showcase-content {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 2fr auto 3fr;
+    grid-template-areas: ".""content"".";
+}
+
+#showcase-feature {
+    grid-area: content;
+}
+
+#landingPage {
     background: #333 url('../Images/action-android-device-electronics-595804.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 450px;
-    z-index: -1;
-    opacity: 0.4;
 }
 
-#showcase .showcase-image-projects {
-    position: absolute;
-    background: #333 url('../Images/ideas-whiteboard-person-working-7369.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 450px;
-    z-index: -1;
-    opacity: 0.4;
-}
-
-#showcase .showcase-image-AboutMe {
-    position: absolute;
-    background: #333 url('../Images/focus-photo-of-super-mario-luigi-and-yoshi-figurines-163036.jpg');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 450px;
-    z-index: -1;
-    opacity: 0.4;
-}
-
-#showcase h1 {
-    padding-top: 100px;
-    padding-bottom: 0;
-}
-
-#showcase .content-wrap,
-#section-a .content-wrap {
-    padding: 0 1.5em;
-}
-
-/* Section A */
+//Section A
 
 #section-a {
     background: #eaeaea;
@@ -108,11 +91,14 @@ p {
     padding-bottom: 2em;
 }
 
-/* Section B */
 
+
+//Section B
 
 #section-b {
     padding: 2em 1em 1em;
+    background: #333;
+    color: #eaeaea;
 }
 
 #section-b ul {
@@ -125,13 +111,15 @@ p {
     margin-bottom: 1em;
     background: #fff;
     color: #333;
+    margin: 0.5em;
 }
 
-.card{
+.card {
     height: 100%;
     display: grid;
     grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: "image" "content" "space" "button";
+    grid-template-areas: "image""content"".""button";
+    padding-bottom: 1em;
 }
 
 .card-image {
@@ -139,43 +127,27 @@ p {
 }
 
 .card-content {
-    padding: 1.5em;
     grid-area: content;
+    padding: 1em 1em 0em 1em;
 }
 
-.blankSpace {
-    grid-area: space;
-}
-
-.card-button
-{
-    padding: 1.5em;
+.card-button {
     grid-area: button;
 }
 
-
-
-/* Section C */
+//Section C
 
 #section-c {
-    background: #fff;
+    background: #eaeaea;
     color: #333;
-    padding: 2em;
 }
 
-/* Section Social */
+//Section Social
 
 #section-social {
     background: #333;
-    color: #fff;
-    padding: 2em;
-}
-
-#section-social img {
-width: 100%;
-height: auto;
-color: #fff;
-filter: invert(100%);
+    color: #eaeaea;
+    padding-bottom: 1em;
 }
 
 #section-social ul {
@@ -186,74 +158,50 @@ filter: invert(100%);
     padding: 0;
 }
 
-
 #section-social li {
-    width: 5%;
+    width: 15%;
     margin: 0.5em;
 }
 
-/* Footer */
+#section-social img {
+    filter: invert(100%);
+}
 
-#main-footer {
+//Footer
+
+#footer {
     background: #000;
     color: #fff;
     padding: 2em;
     text-align: center;
 }
 
-#main-footer a {
-    color: #2690d4;
-    text-decoration: none;
-}
-
-/* Media Query */
-
-@media(min-width: 700px) {
+@media (min-width: 780px) {
     .grid {
         display: grid;
-        grid-template-columns: 1fr repeat(2, minmax(auto, 30em)) 1fr;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 45em)) 1fr;
     }
 
-    #section-a .content-text p {
-        padding-top: 0;
-    }
-
-    #showcase {
-        min-height: 700px;
-    }
-
-    #showcase .showcase-image {
-        height: 700px;
-    }
-
-    #showcase .showcase-image-projects {
-        height: 700px;
-    }
-
-    #showcase .showcase-image-AboutMe {
-        height: 700px;
-    }
-
-    #showcase h1 {
-        padding-top: 200px;
-    }
-
-    .content-wrap,
-    #section-b ul {
+    .content-wrap {
         grid-column: 2/4;
     }
 
-    .box,
-    #main-footer div {
+    #footer div {
         grid-column: span 2;
     }
 
     #section-b ul {
+        grid-column: 2/4;
         display: flex;
-        justify-content: space-around;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
     #section-b li {
-        width: 31%;
+        width: 20em;
+    }
+
+    #section-social li {
+        width: 5%;
     }
 }

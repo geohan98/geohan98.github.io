@@ -117,8 +117,8 @@ p {
 .card {
     height: 100%;
     display: grid;
-    grid-template-rows: auto auto 1fr auto;
-    grid-template-areas: "image""content"".""button";
+    grid-template-rows: auto 0fr auto 1fr auto;
+    grid-template-areas: "image"".""content"".""button";
     padding-bottom: 1em;
 }
 
@@ -133,6 +133,7 @@ p {
 
 .card-button {
     grid-area: button;
+    padding-bottom: 1em;
 }
 
 //Section C
@@ -140,6 +141,7 @@ p {
 #section-c {
     background: #eaeaea;
     color: #333;
+    padding-bottom: 1em;
 }
 
 //Section Social

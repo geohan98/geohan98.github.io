@@ -28,7 +28,6 @@ p {
     padding: 1em 0;
 }
 
-
 .button {
     display: inline-block;
     background: #333;
@@ -63,9 +62,9 @@ p {
     background-size: cover;
     bottom: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     z-index: -1;
-    opacity: 0.4;
+    opacity: 0.5;
 }
 
 #showcase .showcase-content {
@@ -91,8 +90,6 @@ p {
     color: #333;
     padding-bottom: 2em;
 }
-
-
 
 //Section B
 

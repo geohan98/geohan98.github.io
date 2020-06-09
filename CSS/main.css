@@ -5,7 +5,7 @@ html {
 
 body {
   margin: 0;
-  background: #333;
+  background: red;
   color: #fff;
   font-size: 1.1em;
   line-height: 1.5;
@@ -59,9 +59,9 @@ p {
   background-size: cover;
   bottom: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: -1;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 
 #showcase .showcase-content {
@@ -81,7 +81,7 @@ p {
 }
 
 #landingPage {
-  background: #333 url("../Images/action-android-device-electronics-595804.jpg");
+  background: #333;
 }
 
 #section-a {

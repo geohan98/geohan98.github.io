@@ -29,7 +29,7 @@ p {
 
 .button {
   display: inline-block;
-  background: #333;
+  background: red;
   color: #fff;
   text-decoration: none;
   padding: 1em 2em;

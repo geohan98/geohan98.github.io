@@ -5,7 +5,7 @@ html {
 
 body {
   margin: 0;
-  background: #0400ff;
+  background: #333;
   color: #fff;
   font-size: 1.1em;
   line-height: 1.5;
@@ -50,20 +50,19 @@ p {
   height: 100vh;
   color: #fff;
   text-align: center;
-  background: #21630d;
 }
 
 #showcase .showcase-image {
   position: absolute;
-  background: red;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  top: 50%;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
-  opacity: 1.0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+  opacity: 0.4;
 }
 
 #showcase .showcase-content {
@@ -80,11 +79,10 @@ p {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: content;
-  z-index: 1;
 }
 
 #landingPage {
-  background: #333;
+  background: #333 url("../Images/action-android-device-electronics-595804.jpg");
 }
 
 #section-a {

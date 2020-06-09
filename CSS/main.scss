@@ -62,7 +62,7 @@ p {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    top: 100px;
+    top: 50%;
     width: 100%;
     height: 100%;
     z-index: 0;
@@ -79,6 +79,7 @@ p {
 
 #showcase-feature {
     grid-area: content;
+    z-index: 1;
 }
 
 #landingPage {

@@ -24,7 +24,7 @@ h2,
 h3,
 p {
   margin: 0;
-  padding: 1em 0;
+  padding: 0.5em 0;
 }
 
 .button {
@@ -83,14 +83,51 @@ p {
   background: #333 url("../Images/action-android-device-electronics-595804.jpg");
 }
 
+#showcase-projects {
+  min-height: 45vh;
+  color: #fff;
+  text-align: center;
+}
+
+#showcase-projects .showcase-image {
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 45vh;
+  z-index: -1;
+  opacity: 0.4;
+}
+
+#showcase-projects .showcase-content {
+  width: 100%;
+  height: 45vh;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr auto 1fr;
+      grid-template-rows: 1fr auto 1fr;
+      grid-template-areas: "." "content" ".";
+}
+
+#showcase-feature {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: content;
+}
+
+#projects {
+  background: #333 url("../Images/ideas-whiteboard-person-working-7369.jpg");
+}
+
 #section-a {
   background: #eaeaea;
   color: #333;
-  padding-bottom: 2em;
+  padding: 1em 1em;
 }
 
 #section-b {
-  padding: 2em 1em 1em;
+  padding: 1em 0em;
   background: #333;
   color: #eaeaea;
 }
@@ -115,7 +152,6 @@ p {
   -ms-grid-rows: auto 0fr auto 1fr auto;
       grid-template-rows: auto 0fr auto 1fr auto;
       grid-template-areas: "image" "." "content" "." "button";
-  padding-bottom: 1em;
 }
 
 .card-image {
@@ -128,7 +164,7 @@ p {
   -ms-grid-row: 3;
   -ms-grid-column: 1;
   grid-area: content;
-  padding: 1em 1em 0em 1em;
+  padding: 1em 2em 0em 2em;
 }
 
 .card-button {
@@ -141,35 +177,19 @@ p {
 #section-c {
   background: #eaeaea;
   color: #333;
-  padding-bottom: 1em;
+  padding: 1em 1em;
 }
 
 #section-social {
   background: #333;
   color: #eaeaea;
-  padding-bottom: 1em;
+  padding: 1em 1em;
 }
 
 #section-social ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   list-style: none;
   margin: 0;
   padding: 0;
-}
-
-#section-social li {
-  width: 15%;
-  margin: 0.5em;
-}
-
-#section-social img {
-  -webkit-filter: invert(100%);
-          filter: invert(100%);
 }
 
 #footer {
@@ -179,7 +199,7 @@ p {
   text-align: center;
 }
 
-@media (min-width: 780px) {
+@media (min-width: 850px) {
   .grid {
     display: -ms-grid;
     display: grid;
@@ -208,10 +228,7 @@ p {
             justify-content: center;
   }
   #section-b li {
-    width: 20em;
-  }
-  #section-social li {
-    width: 5%;
+    width: 22em;
   }
 }
 /*# sourceMappingURL=main.css.map */

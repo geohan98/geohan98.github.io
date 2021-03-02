@@ -34,7 +34,7 @@ p {
   text-decoration: none;
   padding: 1em 2em;
   border: 1px solid #666;
-  margin: .5em 0;
+  margin: 0.5em 0;
 }
 
 .button:hover {
@@ -74,7 +74,7 @@ p {
 }
 
 #showcase-feature {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: content;
 }
@@ -111,7 +111,7 @@ p {
 }
 
 #showcase-feature {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: content;
 }
@@ -126,19 +126,19 @@ p {
   padding: 1em 1em;
 }
 
-#section-b {
+#section-b, #section-album {
   padding: 1em 0em;
   background: #333;
   color: #eaeaea;
 }
 
-#section-b ul {
+#section-b, #section-album ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#section-b li {
+#section-b, #section-album li {
   margin-bottom: 1em;
   background: #fff;
   color: #333;
@@ -161,7 +161,7 @@ p {
 }
 
 .card-content {
-  -ms-grid-row: 3;
+  -ms-grid-row: 2;
   -ms-grid-column: 1;
   grid-area: content;
   padding: 1em 2em 0em 2em;
@@ -172,6 +172,27 @@ p {
   -ms-grid-column: 1;
   grid-area: button;
   padding-bottom: 1em;
+}
+
+.album-card {
+  height: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "image" "content";
+}
+
+.album-image {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: image;
+}
+
+.album-content {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: content;
 }
 
 #section-c {
@@ -206,6 +227,12 @@ p {
     -ms-grid-columns: 1fr (minmax(auto, 45em))[2] 1fr;
         grid-template-columns: 1fr repeat(2, minmax(auto, 45em)) 1fr;
   }
+  .album-grid {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr auto auto 1fr;
+        grid-template-columns: 1fr auto auto 1fr;
+  }
   .content-wrap {
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
@@ -214,7 +241,7 @@ p {
   #footer div {
     grid-column: span 2;
   }
-  #section-b ul {
+  #section-b, #section-album ul {
     -ms-grid-column: 2;
     -ms-grid-column-span: 2;
     grid-column: 2/4;
@@ -229,6 +256,9 @@ p {
   }
   #section-b li {
     width: 22em;
+  }
+  #section-album li {
+    width: 32em;
   }
 }
 /*# sourceMappingURL=main.css.map */

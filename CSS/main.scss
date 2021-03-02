@@ -1,226 +1,251 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:300,700&display=swap");
 
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-    margin: 0;
-    background: #333;
-    color: #fff;
-    font-size: 1.1em;
-    line-height: 1.5;
-    text-align: center;
-    font-family: "Montserrat";
+  margin: 0;
+  background: #333;
+  color: #fff;
+  font-size: 1.1em;
+  line-height: 1.5;
+  text-align: center;
+  font-family: "Montserrat";
 }
 
 img {
-    display: block;
-    width: 100%;
-    height: auto;
+  display: block;
+  width: 100%;
+  height: auto;
 }
 
 h1,
 h2,
 h3,
 p {
-    margin: 0;
-    padding: 0.5em 0;
+  margin: 0;
+  padding: 0.5em 0;
 }
 
-
 .button {
-    display: inline-block;
-    background: #333;
-    color: #fff;
-    text-decoration: none;
-    padding: 1em 2em;
-    border: 1px solid #666;
-    margin: .5em 0;
+  display: inline-block;
+  background: #333;
+  color: #fff;
+  text-decoration: none;
+  padding: 1em 2em;
+  border: 1px solid #666;
+  margin: 0.5em 0;
 }
 
 .button:hover {
-    background: #eaeaea;
-    color: #333;
+  background: #eaeaea;
+  color: #333;
 }
 
 .content-wrap {
-    padding: 0 1.5em;
+  padding: 0 1.5em;
 }
 
 //Showcase
 
 #showcase {
-    min-height: 100vh;
-    color: #fff;
-    text-align: center;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
 }
 
 #showcase .showcase-image {
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-    z-index: -1;
-    opacity: 0.4;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  z-index: -1;
+  opacity: 0.4;
 }
 
 #showcase .showcase-content {
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 2fr auto 3fr;
-    grid-template-areas: ".""content"".";
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 2fr auto 3fr;
+  grid-template-areas: "." "content" ".";
 }
 
 #showcase-feature {
-    grid-area: content;
+  grid-area: content;
 }
 
 #landingPage {
-    background: #333 url('../Images/action-android-device-electronics-595804.jpg');
+  background: #333 url("../Images/action-android-device-electronics-595804.jpg");
 }
 
 //Showcase Project
 
 #showcase-projects {
-    min-height: 45vh;
-    color: #fff;
-    text-align: center;
+  min-height: 45vh;
+  color: #fff;
+  text-align: center;
 }
 
 #showcase-projects .showcase-image {
-    position: absolute;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: 45vh;
-    z-index: -1;
-    opacity: 0.4;
+  position: absolute;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 45vh;
+  z-index: -1;
+  opacity: 0.4;
 }
 
 #showcase-projects .showcase-content {
-    width: 100%;
-    height: 45vh;
-    display: grid;
-    grid-template-rows: 1fr auto 1fr;
-    grid-template-areas: ".""content"".";
+  width: 100%;
+  height: 45vh;
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+  grid-template-areas: "." "content" ".";
 }
 
 #showcase-feature {
-    grid-area: content;
+  grid-area: content;
 }
 
 #projects {
-    background: #333 url('../Images/ideas-whiteboard-person-working-7369.jpg');
+  background: #333 url("../Images/ideas-whiteboard-person-working-7369.jpg");
 }
 
 //Section A
 
 #section-a {
-    background: #eaeaea;
-    color: #333;
-    padding: 1em 1em;
+  background: #eaeaea;
+  color: #333;
+  padding: 1em 1em;
 }
 
 //Section B
 
-#section-b {
-    padding: 1em 0em;
-    background: #333;
-    color: #eaeaea;
+#section-b ,#section-album {
+  padding: 1em 0em;
+  background: #333;
+  color: #eaeaea;
 }
 
-#section-b ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+#section-b ,#section-album ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-#section-b li {
-    margin-bottom: 1em;
-    background: #fff;
-    color: #333;
-    margin: 0.5em;
+#section-b ,#section-album li {
+  margin-bottom: 1em;
+  background: #fff;
+  color: #333;
+  margin: 0.5em;
 }
 
 .card {
-    height: 100%;
-    display: grid;
-    grid-template-rows: auto 0fr auto 1fr auto;
-    grid-template-areas: "image"".""content"".""button";
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 0fr auto 1fr auto;
+  grid-template-areas: "image" "." "content" "." "button";
 }
 
 .card-image {
-    grid-area: image;
+  grid-area: image;
 }
 
 .card-content {
-    grid-area: content;
-    padding: 1em 2em 0em 2em;
+  grid-area: content;
+  padding: 1em 2em 0em 2em;
 }
 
 .card-button {
-    grid-area: button;
-    padding-bottom: 1em;
+  grid-area: button;
+  padding-bottom: 1em;
+}
+
+//Album
+
+.album-card {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas: "image" "content";
+}
+
+.album-image {
+  grid-area: image;
+}
+
+.album-content {
+  grid-area: content;
 }
 
 //Section C
 
 #section-c {
-    background: #eaeaea;
-    color: #333;
-    padding: 1em 1em;
+  background: #eaeaea;
+  color: #333;
+  padding: 1em 1em;
 }
 
 //Section Social
 
 #section-social {
-    background: #333;
-    color: #eaeaea;
-    padding: 1em 1em;
+  background: #333;
+  color: #eaeaea;
+  padding: 1em 1em;
 }
 
 #section-social ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 //Footer
 
 #footer {
-    background: #000;
-    color: #fff;
-    padding: 2em;
-    text-align: center;
+  background: #000;
+  color: #fff;
+  padding: 2em;
+  text-align: center;
 }
 
 @media (min-width: 850px) {
-    .grid {
-        display: grid;
-        grid-template-columns: 1fr repeat(2, minmax(auto, 45em)) 1fr;
-    }
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr repeat(2, minmax(auto, 45em)) 1fr;
+  }
 
-    .content-wrap {
-        grid-column: 2/4;
-    }
+  .album-grid {
+    display: grid;
+    grid-template-columns: 1fr auto auto 1fr;
+  }
 
-    #footer div {
-        grid-column: span 2;
-    }
+  .content-wrap {
+    grid-column: 2/4;
+  }
 
-    #section-b ul {
-        grid-column: 2/4;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+  #footer div {
+    grid-column: span 2;
+  }
 
-    #section-b li {
-        width: 22em;
-    }
+  #section-b ,#section-album ul {
+    grid-column: 2/4;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #section-b li {
+    width: 22em;
+  }
+
+  #section-album li {
+    width: 32em;
+  }
 }

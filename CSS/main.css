@@ -80,7 +80,7 @@ p {
 }
 
 #landingPage {
-  background: #333 url("../Images/action-android-device-electronics-595804.jpg");
+  background: #333 url("../Images/action-android-device-electronics-595804_Big.jpg");
 }
 
 #showcase-projects {
@@ -220,7 +220,7 @@ p {
   text-align: center;
 }
 
-@media (min-width: 850px) {
+@media (min-width: 1100px) {
   .grid {
     display: -ms-grid;
     display: grid;
@@ -255,7 +255,7 @@ p {
             justify-content: center;
   }
   #section-b li {
-    width: 22em;
+    width: 28em;
   }
   #section-album li {
     width: 32em;

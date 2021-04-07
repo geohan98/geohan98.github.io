@@ -133,13 +133,13 @@ p {
   color: #eaeaea;
 }
 
-#section-b ,#section-album ul {
+#section-b ul ,#section-album ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#section-b ,#section-album li {
+#section-b li ,#section-album li {
   margin-bottom: 1em;
   background: #fff;
   color: #333;
@@ -234,7 +234,7 @@ p {
     grid-column: span 2;
   }
 
-  #section-b ,#section-album ul {
+  #section-b ul ,#section-album ul {
     grid-column: 2/4;
     display: flex;
     flex-wrap: wrap;
